@@ -36,7 +36,8 @@ terraform destroy
 - [ ] check the invoke answer (see below) -> A: Check Lambda Invoke Answer
 - [ ] code incl. steps before will be in git branch `add_lambda_function`
 
-- [ ] create an HTTP API with API Gateway 2 as documented https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway?in=terraform/aws#create-an-http-api-with-api-gateway
+- [ ] create an HTTP API with API Gateway 2 as documented https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway?in=terraform/aws#create-an-http-api-with-api-gateway, cross check with documentation at https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/apigatewayv2_api
+- [ ] Check result of the API Gateway: `curl "$(terraform output -raw base_url)/hello"`
 
 ## A: Check Lambda Invoke Answer
 `aws lambda invoke --region=eu-west-1 --function-name=$(terraform output -raw function_name) response.json`
