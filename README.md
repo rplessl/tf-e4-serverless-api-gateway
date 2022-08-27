@@ -28,7 +28,19 @@ terraform destroy
 ## step by step
 
 - [ ] checkout git branch `main`, workflow with `terraform apply`
-- [ ] checkout git branch `add_lambda_function`, workflow with `terraform apply`
+
+- [ ] enhance the lambda payload code in archive as documented https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway?in=terraform/aws#create-and-upload-lambda-function-archive
+- [ ] ⚠️ the trick using `aws s3 ls $(terraform output -raw lambda_bucket_name)`
+
+- [ ] create the lambda function as documented https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway?in=terraform/aws#create-the-lambda-function *AND use Node.js 16 instead of Node.js 12*.
+- [ ] check the invoke answer (see below) -> A: Check Lambda Invoke Answer
+- [ ] code incl. steps before will be in git branch `add_lambda_function`
+
+- [ ] create an HTTP API with API Gateway 2 as documented https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway?in=terraform/aws#create-an-http-api-with-api-gateway
+
+## A: Check Lambda Invoke Answer
+`aws lambda invoke --region=eu-west-1 --function-name=$(terraform output -raw function_name) response.json`
+
 
 
 
