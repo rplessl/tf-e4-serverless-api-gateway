@@ -34,10 +34,16 @@ terraform destroy
 
 - [ ] create the lambda function as documented https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway?in=terraform/aws#create-the-lambda-function *AND use Node.js 16 instead of Node.js 12*.
 - [ ] check the invoke answer (see below) -> A: Check Lambda Invoke Answer
-- [ ] code incl. steps before will be in git branch `add_lambda_function`
+- [ ] 👨🏻‍💻 code incl. steps before will be in git branch `add_lambda_function`
 
 - [ ] create an HTTP API with API Gateway 2 as documented https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway?in=terraform/aws#create-an-http-api-with-api-gateway, cross check with documentation at https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/apigatewayv2_api
 - [ ] Check result of the API Gateway: `curl "$(terraform output -raw base_url)/hello"`
+- [ ] 👨🏻‍💻 code incl. steps before will be in git branch `add_api_gateway`
+
+- [ ] update your code according https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway?in=terraform/aws#update-your-lambda-function
+- [ ] Check result of the API Gateway: `curl "$(terraform output -raw base_url)/hello?Name=TerraformExercise"`
+
+- [ ] do not destroy your infrastructure yet
 
 ## A: Check Lambda Invoke Answer
 `aws lambda invoke --region=eu-west-1 --function-name=$(terraform output -raw function_name) response.json`
