@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0.0"
+      version = "~> 4.16"
     }
     random = {
       source  = "hashicorp/random"
@@ -22,7 +22,7 @@ provider "aws" {
 }
 
 resource "random_pet" "lambda_bucket_name" {
-  prefix = "learn-terraform-functions"
+  prefix = "tf-e4-serverless-api-gateway"
   length = 4
 }
 
