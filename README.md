@@ -1,11 +1,16 @@
-# tf-e3-vpc-module
-Learn Terraform Exercise using 3rd party AWS module
+# tf-e4-serverless-api-gateway
+Learn Terraform Exercise using lambda api-gateway and additional features.
+
+Example and code bases on:
+* https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway
+* https://github.com/hashicorp/learn-terraform-lambda-api-gateway
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 Goals of this Exercise:
 
-- [ ] Learn to use 3rd party AWS terraform modules
+- [ ] Learn to setup and deploy serverless functions
+- [ ] Learn to use and configure API Gateways
 
 ## 🚧 -> 🚀
 
@@ -20,24 +25,11 @@ terraform apply my-tf-plan.tfplan
 terraform destroy
 ```
 
-## Thirdparty VPC Module
+## step by step
 
-In this exercise, we use the AWS VPC Module crafted by Anton Babenko.
+- [ ] checkout git branch `main`, workflow with `terraform apply`
+- [ ] checkout git branch `add_lambda_function`, workflow with `terraform apply`
 
-https://registry.terraform.io/modules/terraform-aws-modules/vpc/
-
-We are using the VPC module 4 times
-
-- VPC E3a with fixed EIPs, single NAT per VPC
-- VPC E3b with all networks, single NAT
-- VPC E3c with public reachable Database Network
-- VPC E3d with IPv6
-
-## Debug and Enhancements
-
-- [ ] Checkout Git Branch `fixme_1` and try to fix the setup
-- [ ] Checkout Git Branch `fixme_2` and try to fix the setup
-- [ ] create a new main.tf with only 1 VPC, with public_subnet, private_subnet, intra_subnets, flowlogs, and as a bonus private endpoints (ssm, ec2, kms)
 
 
 

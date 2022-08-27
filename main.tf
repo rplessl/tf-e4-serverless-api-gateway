@@ -23,7 +23,7 @@ provider "aws" {
 
 resource "random_pet" "lambda_bucket_name" {
   prefix = "tf-e4-serverless-api-gateway"
-  length = 4
+  length = 3
 }
 
 resource "aws_s3_bucket" "lambda_bucket" {
