@@ -42,13 +42,20 @@ terraform destroy
 
 - [ ] update your code according https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway?in=terraform/aws#update-your-lambda-function
 - [ ] Check result of the API Gateway: `curl "$(terraform output -raw base_url)/hello?Name=TerraformExercise"`
+- [ ] 👨🏻‍💻 code incl. steps before will be in git branch `update_lambda_function`
 
 - [ ] do not destroy your infrastructure yet
 
+- [ ] Try yourself: Add a AWS WAF in Front of your API Gateway and the Lambda function
+- [ ] Hint: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/wafv2_web_acl_association
+- [ ] 👨🏻‍💻 Cheat: code incl. steps before will be in git branch `add_aws_waf_trial`
+- [ ] 👨🏻‍💻 Real Teaser & Cheat: code incl. steps before will be in git branch `add_aws_waf_success`
+
+- [ ] Try yourself: Add a storage with DynamoDB to the lambda function
+- [ ] Hint: https://medium.com/swlh/deploy-aws-lambda-and-dynamodb-using-terraform-6e04f62a3165
+
 ## A: Check Lambda Invoke Answer
 `aws lambda invoke --region=eu-west-1 --function-name=$(terraform output -raw function_name) response.json`
-
-
 
 
 
